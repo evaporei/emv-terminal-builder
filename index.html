@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EMV Terminal Builder</title>
+  </head>
+  <body>
+    <h1>Terminal Type</h1>
+
+    <img src="terminal_type_table.png" alt="terminal_type_table" width="700">
+
+
+    <h1>Terminal Capabilities</h1>
+
+    <h2>Byte 1 - Card Data Input Capability</h2>
+
+    <div>
+      <input type="checkbox" id="manual_key_entry" name="card_data_input_capability">
+      <label for="manual_key_entry">Manual Key Entry</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="magnetic_stripe" name="card_data_input_capability">
+      <label for="magnetic_stripe">Magnetic Stripe</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="ic_with_contacts" name="card_data_input_capability">
+      <label for="ic_with_contacts">IC with contacts</label>
+    </div>
+
+    <h2>Byte 2 - CVM Capability</h2>
+
+    <div>
+      <input type="checkbox" id="plaintext_pin_for_icc_verification" name="cmv_capability">
+      <label for="plaintext_pin_for_icc_verification">Plaintext PIN for ICC verification</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="enciphered_pin_for_online_verification" name="cmv_capability">
+      <label for="enciphered_pin_for_online_verification">Enciphered PIN for online verification</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="signature_paper" name="cmv_capability">
+      <label for="signature_paper">Signature (paper)</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="enciphered_pin_for_offline_verification" name="cmv_capability">
+      <label for="enciphered_pin_for_offline_verification">Enciphered PIN for offline verification</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="no_cvm_required" name="cmv_capability">
+      <label for="no_cvm_required">No CVM Required</label>
+    </div>
+
+    <h2>Byte 3 - Security Capability</h2>
+
+    <div>
+      <input type="checkbox" id="sda" name="security_capability">
+      <label for="sda">SDA</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="dda" name="security_capability">
+      <label for="dda">DDA</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="card_capture" name="security_capability">
+      <label for="card_capture">Card capture</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="cda" name="security_capability">
+      <label for="cda">CDA</label>
+    </div>
+
+
+    <h1>Additional Terminal Capabilities</h1>
+
+    <h2>Byte 1 - Transaction Type Capability</h2>
+
+    <div>
+      <input type="checkbox" id="cash" name="transaction_type_capability1">
+      <label for="cash">Cash</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="goods" name="transaction_type_capability1">
+      <label for="goods">Goods</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="services" name="transaction_type_capability1">
+      <label for="services">Services</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="cashback" name="transaction_type_capability1">
+      <label for="cashback">Cashback</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="inquiry" name="transaction_type_capability1">
+      <label for="inquiry">Inquiry</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="transfer" name="transaction_type_capability1">
+      <label for="transfer">Transfer</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="payment" name="transaction_type_capability1">
+      <label for="payment">Payment</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="administrative" name="transaction_type_capability1">
+      <label for="administrative">Administrative</label>
+    </div>
+
+    <h2>Byte 2 - Transaction Type Capability</h2>
+
+    <div>
+      <input type="checkbox" id="cash_deposit" name="transaction_type_capability2">
+      <label for="cash_deposit">Cash Deposit</label>
+    </div>
+
+    <h2>Byte 3 - Terminal Data Input Capability</h2>
+
+    <div>
+      <input type="checkbox" id="numeric_keys" name="terminal_data_input_capability">
+      <label for="numeric_keys">Numeric keys</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="alphabetic_and_special_characters_keys" name="terminal_data_input_capability">
+      <label for="alphabetic_and_special_characters_keys">Alphabetic and special characters keys</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="command_keys" name="terminal_data_input_capability">
+      <label for="command_keys">Command keys</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="function_keys" name="terminal_data_input_capability">
+      <label for="function_keys">Function keys</label>
+    </div>
+
+    <h2>Byte 4 - Terminal Data Output Capability</h2>
+
+    <div>
+      <input type="checkbox" id="print_attendant" name="terminal_data_output_capability1">
+      <label for="print_attendant">Print, attendant</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="print_cardholder" name="terminal_data_output_capability1">
+      <label for="print_cardholder">Print, cardholder</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="display_attendant" name="terminal_data_output_capability1">
+      <label for="display_attendant">Display, attendant</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="display_cardholder" name="terminal_data_output_capability1">
+      <label for="display_cardholder">Display, cardholder</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="code_table10" name="terminal_data_output_capability1">
+      <label for="code_table10">Code table 10</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="code_table9" name="terminal_data_output_capability1">
+      <label for="code_table9">Code table 9</label>
+    </div>
+
+    <h2>Byte 5 - Terminal Data Output Capability</h2>
+
+    <div>
+      <input type="checkbox" id="code_table8" name="terminal_data_output_capability2">
+      <label for="code_table8">Code table 8</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="code_table7" name="terminal_data_output_capability2">
+      <label for="code_table7">Code table 7</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="code_table6" name="terminal_data_output_capability2">
+      <label for="code_table6">Code table 6</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="code_table5" name="terminal_data_output_capability2">
+      <label for="code_table5">Code table 5</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="code_table4" name="terminal_data_output_capability2">
+      <label for="code_table4">Code table 4</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="code_table3" name="terminal_data_output_capability2">
+      <label for="code_table3">Code table 3</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="code_table2" name="terminal_data_output_capability2">
+      <label for="code_table2">Code table 2</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="code_table1" name="terminal_data_output_capability2">
+      <label for="code_table1">Code table 1</label>
+    </div>
+
+  </body>
+</html>
